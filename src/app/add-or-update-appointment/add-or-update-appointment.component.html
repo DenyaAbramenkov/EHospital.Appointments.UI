@@ -1,0 +1,28 @@
+<div>
+  <h2 *ngIf="!appointmentInfo || appointmentInfo.appointmentid == undefined">Add record</h2>
+  <h2 *ngIf="appointmentInfo && appointmentInfo.appointmentid !== undefined">Update record (ID: {{appointmentInfo.appointmentid}})</h2>
+  <form>
+    <div class="form-group">
+      <label for="patient-id">Patient Id</label>
+      <input type="number" id="patient-id" [(ngModel)]="appointmentInfo.patientId" name="patientId"  class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="user-id">User Id</label>
+      <input type="number" id="user-id" [(ngModel)]="appointmentInfo.userId" name="userId" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="duration-id">Duration</label>
+      <input type="number" id="duration-id" [(ngModel)]="appointmentInfo.duration" name="duration" class="form-control" />
+    </div>
+    <div class="form-group">
+    <label for="destination-id">Purpose</label>
+    <input list="destination-list" type="text" id="destination-id"  [(ngModel)]="appointmentInfo.purpose" name="purpose" class="form-control">
+    <datalist id="destination-list">
+      <option value="inspection">
+      <option value="procedure">
+    </datalist>
+  </div>
+    <button type="button" class="btn btn-primary" (click)="addOrUpdateAppointmentRecord($event);">Save</button>
+  </form>
+</div>

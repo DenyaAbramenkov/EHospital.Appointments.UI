@@ -1,0 +1,21 @@
+<div class="base">
+  <div class="footer">
+    <app-footer ></app-footer>
+  </div>
+  <div class="header">
+    <app-header >
+    </app-header>
+  </div>
+  <div class="left-menu">
+    <app-left-menu></app-left-menu>
+  </div>
+  <div class="right-bar">
+    <app-right-bar></app-right-bar>
+  </div>
+  <div class="grid">
+    <app-appointment-grid  (editClicked)="editClicked($event)" (newClicked)="newClicked($event)" (recordDeleted)="deleteClicked($event)"></app-appointment-grid>
+  </div>
+  <div class="update">
+    <app-add-or-update-appointment (appointmentCreated)= "addOrUpdateAppointment($event)" [appointmentInfo]="currentAppointment"></app-add-or-update-appointment>
+  </div>
+</div>

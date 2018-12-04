@@ -1,0 +1,50 @@
+.grid{
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+
+.header{
+  background-color: #3D9970;
+
+  height: 70px;
+  text-align: center;
+  align-items: center;
+  border-top-color: #2ecc71;
+  border-top-width: 3px;
+  border-top-style: outset;
+  border-bottom-color: #2ecc71;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+}
+.left-menu
+{
+  border-right-style: solid;
+  border-right-width: 3px;
+  border-right-color: #2ecc71;
+  float: left;
+  width: 10%;
+  height: inherit;
+  background-color: Teal;
+}
+
+.right-bar{
+  border-left-style: solid;
+  border-left-width: 3px;
+  border-left-color: #2ecc71;
+  float: right;
+  width: 10%;
+  height: 100%;
+  background-color: Teal;
+}
+
+.update
+{
+  margin-left: 20px;
+  float: left;
+  width: 25%;
+}
+
+.base{
+  height: 1000px;
+}

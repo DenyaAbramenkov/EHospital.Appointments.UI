@@ -1,0 +1,22 @@
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th>AppointmentId</th>   
+      <th>PatientId</th>
+      <th>UserId</th>
+      <th>Duration</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let appointment of appointmentData">
+      <td>{{ appointment.id }}</td>
+      <td>{{ appointment.patientId  }}</td>
+      <td>{{ appointment.userId  }}</td>
+      <td>{{ appointment.duration  }}</td>
+      <td>{{ appointment.purpose  }}</td>
+      <td><a href="#" (click)="editRecord(appointment)">Edit</a></td>
+      <td><a href="#" (click)="deleteRecord(appointment)">Delete</a></td>
+    </tr>
+  </tbody>
+</table>
